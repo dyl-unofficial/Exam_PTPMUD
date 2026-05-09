@@ -46,6 +46,7 @@ public class FaceSigin extends JFrame {
         int height = (int) (screenSize.getHeight() * 0.3);
         setSize(width,height);
         setVisible(true);
+        box.setSelectedIndex(-1);
         //JPskill.setSize((int) (width*0.1),(int) (height*0.5));
         JPskill.setBorder(BorderFactory.createLineBorder(Color.black));
         ButtonGroup genger = new ButtonGroup();
@@ -80,6 +81,14 @@ public class FaceSigin extends JFrame {
                     nv.setGender(getGender(genger));
                     Arr.add(nv);
                     new file_manager().saveNhanVienList(Arr);
+                    fullName.setText("");
+                    girlR.setSelected(false);
+                    boyR.setSelected(false);
+                    box.setSelectedIndex(-1);
+                    _1.setSelected(false);
+                    _2.setSelected(false);
+                    _4.setSelected(false);
+
                 }
             }
         });
